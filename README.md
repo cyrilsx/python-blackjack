@@ -73,3 +73,20 @@ class Student:
 Hello, ny name is Cyril
 
 ```
+
+In python: class variable  
+---
+Let's declare a class variable and a method using classmethod decorator.
+```
+class Classroom:
+
+    nb_student = 0
+    
+     def __init__(self, name):
+        self.name = name
+        Classroom.nb_student += 1
+    
+    @classmethod
+    def how_many(cls):
+        print("We have {:d} students.".format(cls.nb_student))   
+```
