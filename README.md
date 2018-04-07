@@ -154,3 +154,7 @@ The four principles of OOP
 - Polymorphism:  Polymorphism manifests itself by having multiple methods all with the same name, but slightly different functionality.
 
 Source: https://anampiu.github.io/blog/OOP-principles/
+
+Exercise
+---
+Deisgn the data structures for a generic deck of cards. Use it to implement blackjack.
