@@ -90,3 +90,67 @@ class Classroom:
     def how_many(cls):
         print("We have {:d} students.".format(cls.nb_student))   
 ```
+
+In python: composition
+---
+Composition is a way to aggregate objects together by making some objects attributes of others objects.
+```
+class Classroom:
+
+     def __init__(self, name, students):
+     """
+     self.students is a list of the class Student
+     """
+        self.name = name
+        self.students = []
+    
+```
+
+
+In python: inheritance
+---
+In OOP, inheritence is a way of arraging objets in a hierarchy from the most general to the most specific.
+In python, all objects inherit from `object`.
+
+We also often say that a class is a subclass or child class of a class from which it inherits, or that the other class is its superclass or parent class. 
+
+```
+class Animal:
+
+    def __init__(self, name):
+        self.name = name
+
+    def make_noise(self):
+        return ""
+
+class Cat(Animal):
+
+    def __init__(self, name):
+        super(Cat, self).__init__(name)
+
+    def make_noise(self):
+        return "Miaou!"
+
+class Dog(Animal):
+
+    def __init__(self, name):
+        super(Dog, self).__init__(name)
+
+    def make_noise(self):
+        return "Wouaf!"
+
+>>> animals = [Cat("Kitty"), Dog("Diji")]
+>>> for animal in animals:
+        print(animal.name + " -> " + animal.make_noise())
+        
+Kitty -> Miaou!
+Diji -> Wouaf!
+```
+The four principles of OOP
+---
+- Encapsulation: Encapsulation means that the internal representation of an object is generally hidden from view outside of the object’s definition. 
+- Abstraction: An abstraction denotes the essential characteristics of an object that distinguish it from all other kinds of object
+- Inheritance: Inheritance is a way to reuse code of existing objects.
+- Polymorphism:  Polymorphism manifests itself by having multiple methods all with the same name, but slightly different functionality.
+
+Source: https://anampiu.github.io/blog/OOP-principles/
